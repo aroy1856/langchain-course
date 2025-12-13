@@ -1,0 +1,10 @@
+from dotenv import load_dotenv
+
+from graph.graph import app
+
+load_dotenv()
+
+
+if __name__ == "__main__":
+    res = app.invoke(input={"question": "What is the capital of France?"})
+    print(res["generation"])
